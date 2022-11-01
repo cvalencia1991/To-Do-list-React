@@ -1,41 +1,44 @@
-import React, { useState} from "react"
-import styles from "./todoItem.module.css"
-import { FaTrash } from "react-icons/fa"
+/* eslint-disable react/destructuring-assignment */
+/* eslint-disable react/prop-types */
+/* eslint-disable react/button-has-type */
+import React, { useState } from 'react';
+import { FaTrash } from 'react-icons/fa';
+import styles from './todoItem.module.css';
 
-const TodoItem = props => {
-  const [editing, setEditing] = useState(false)
+const TodoItem = (props) => {
+  const [editing, setEditing] = useState(false);
 
   const handleEditing = () => {
-    setEditing(true)
-  }
-/*   useEffect(() => {
+    setEditing(true);
+  };
+  /*   useEffect(() => {
     return () => {
       console.log("Cleaning up...")
     }
   }, []) */
 
-  const handleUpdatedDone = event => {
-    if (event.key === "Enter") {
-      setEditing(false)
+  const handleUpdatedDone = (event) => {
+    if (event.key === 'Enter') {
+      setEditing(false);
     }
-  }
+  };
 
   const completedStyle = {
-    fontStyle: "italic",
-    color: "#595959",
+    fontStyle: 'italic',
+    color: '#595959',
     opacity: 0.4,
-    textDecoration: "line-through",
-  }
+    textDecoration: 'line-through',
+  };
 
-  const { completed, id, title } = props.todo
+  const { completed, id, title } = props.todo;
 
-  let viewMode = {}
-  let editMode = {}
+  const viewMode = {};
+  const editMode = {};
 
   if (editing) {
-    viewMode.display = "none"
+    viewMode.display = 'none';
   } else {
-    editMode.display = "none"
+    editMode.display = 'none';
   }
 
   return (
@@ -47,8 +50,8 @@ const TodoItem = props => {
           checked={completed}
           onChange={() => props.handleChangeProps(id)}
         />
-        <button onClick={() => props.deleteTodoProps(id)}> 
-        <FaTrash style={{ color: "orangered", fontSize: "16px" }} />
+        <button onClick={() => props.deleteTodoProps(id)}>
+          <FaTrash style={{ color: 'orangered', fontSize: '16px' }} />
         </button>
         <span style={completed ? completedStyle : null}>{title}</span>
       </div>
@@ -57,13 +60,13 @@ const TodoItem = props => {
         style={editMode}
         className={styles.textInput}
         value={title}
-        onChange={e => {
-          props.setUpdate(e.target.value, id)
+        onChange={(e) => {
+          props.setUpdate(e.target.value, id);
         }}
         onKeyDown={handleUpdatedDone}
       />
     </li>
-  )
-}
+  );
+};
 
-export default TodoItem
+export default TodoItem;
