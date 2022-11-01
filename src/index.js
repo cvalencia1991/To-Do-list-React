@@ -1,8 +1,8 @@
 import React from 'react';
 /* import ReactDOM from 'react-dom'; */
 import { createRoot } from 'react-dom/client';
-/* import './index.css';
-import App from './App'; */
+import "./App.css"
+/*import App from './App'; */
 import TodoContainer from './components/TodoContainer';
 import reportWebVitals from './reportWebVitals';
 
