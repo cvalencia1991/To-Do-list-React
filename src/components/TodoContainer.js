@@ -25,7 +25,7 @@ class TodoContainer extends React.Component {
           {
             id: 1,
             title: "Setup development environment",
-            completed: true
+            completed: false
           },
           {
             id: 2,
@@ -39,11 +39,19 @@ class TodoContainer extends React.Component {
           }
         ]
        };
+
+       delTodo = id => {
+        console.log("deleted", id);
+      };
   render() {
     return (
         <div>
-            <Header />
-        <TodoList todos={this.state.todos} handleChangeProps={this.handleChange} />
+        <Header />
+        <TodoList
+        todos={this.state.todos}
+        handleChangeProps={this.handleChange}
+        deleteTodoProps={this.delTodo}
+        />
       </div>
     )
   }
