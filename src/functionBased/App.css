@@ -64,3 +64,9 @@ body {
   outline: none;
   border: none;
 }
+
+.input-submit svg {
+  color: darkcyan;
+  font-size: 20px;
+  margin-top: 2px;
+}
