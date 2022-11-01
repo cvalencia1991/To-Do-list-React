@@ -10,7 +10,7 @@ const root = createRoot(container);
 
 root.render(
     <React.StrictMode>
-        <Router>
+        <Router basename={process.env.PUBLIC_URL}>
             <TodoContainer />
         </Router>
     </React.StrictMode>
