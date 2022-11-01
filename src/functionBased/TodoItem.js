@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState} from "react"
 import styles from "./todoItem.module.css"
 import { FaTrash } from "react-icons/fa"
 
@@ -8,11 +8,11 @@ const TodoItem = props => {
   const handleEditing = () => {
     setEditing(true)
   }
-  useEffect(() => {
+/*   useEffect(() => {
     return () => {
       console.log("Cleaning up...")
     }
-  }, [])
+  }, []) */
 
   const handleUpdatedDone = event => {
     if (event.key === "Enter") {
