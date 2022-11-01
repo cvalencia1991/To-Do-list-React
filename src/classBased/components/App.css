@@ -4,6 +4,7 @@
   padding: 0;
 }
 
+/* Add some styles to the pages */
 body {
   font-family: "Segoe UI", Arial, sans-serif;
   line-height: 1.4;
@@ -31,7 +32,7 @@ body {
   margin-bottom: 20px;
   display: flex;
   border: none;
-  border-radius: calc(0.5 * 100px); 
+  border-radius: calc(0.5 * 100px);
   box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.38);
   justify-content: space-evenly;
 }
