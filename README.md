@@ -1,6 +1,6 @@
 ![Microverse](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Math Magicas
+# To Do List React
 
 In this proyect I create the a TodoList Using React Libraries
 
