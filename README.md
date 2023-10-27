@@ -16,7 +16,7 @@ To get a local copy up and running follow these simple example steps.
  - Enjoy :)
 
 
-[see live demo](https://cvalencia1991.github.io/ToDolistReact/)
+Live Demo : [see live demo](https://learningreactjavascript.netlify.app/)
 
 ## Built With
 
